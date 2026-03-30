@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About Us | Quick Green Plants - Our Story & Mission</title>
+    <meta name="description" content="Learn about Quick Green Plants: our passion for organic gardening, sustainable practices, and the story behind 78,000+ words of expert horticultural knowledge.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables (matching homepage) */
+        :root {
+            --primary-green: #2e6b3e;
+            --light-green: #4c9a6f;
+            --dark-green: #1e4a2f;
+            --accent-lime: #b3d9a0;
+            --soil-brown: #8b5a2b;
+            --cream: #fef9e6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-lime);
+        }
+
+        /* Page-specific hero (softer) */
+        .about-hero {
+            background: linear-gradient(rgba(30,74,47,0.8), rgba(30,74,47,0.8)), url('https://source.unsplash.com/1600x500/?gardening,team,community') center/cover;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .about-hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            margin: 2rem 0 1rem;
+            color: var(--dark-green);
+            border-bottom: 3px solid var(--light-green);
+            display: inline-block;
+            width: auto;
+        }
+
+        .about-story {
+            background: white;
+            border-radius: 32px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            margin: 2rem 0;
+        }
+        .about-story p {
+            margin-bottom: 1.2rem;
+            font-size: 1.08rem;
+        }
+        .about-story h3 {
+            color: var(--primary-green);
+            margin: 1.5rem 0 0.8rem 0;
+            font-size: 1.6rem;
+        }
+
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .mission-card, .vision-card {
+            flex: 1;
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 28px;
+            transition: transform 0.2s;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-5px);
+        }
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .team-member {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 1.5rem;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+        .team-member img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        .team-member h4 {
+            font-size: 1.4rem;
+            margin: 1rem 0 0.3rem;
+            color: var(--primary-green);
+        }
+        .team-member p {
+            padding: 0 1rem;
+            color: #2c553f;
+            font-style: italic;
+        }
+
+        .stats {
+            background: linear-gradient(120deg, var(--primary-green), var(--dark-green));
+            border-radius: 48px;
+            padding: 2rem;
+            margin: 3rem 0;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .stat-item {
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem;
+        }
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: bold;
+            display: block;
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .timeline {
+            margin: 3rem 0;
+        }
+        .timeline-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+            background: var(--cream);
+            padding: 1rem 1.8rem;
+            border-radius: 40px;
+            align-items: center;
+        }
+        .year {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            min-width: 100px;
+        }
+
+        footer {
+            background: #0e2a1f;
+            color: #cdedd8;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-info h3, .footer-contact h3 {
+            margin-bottom: 0.8rem;
+            color: var(--accent-lime);
+        }
+        .footer-contact p {
+            margin: 0.5rem 0;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 1rem;
+            border-top: 1px solid #2a5a3a;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            .about-hero h2 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .btn-back {
+            display: inline-block;
+            background: var(--light-green);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+        .btn-back:hover {
+            background: var(--primary-green);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <h1>🌿 Quick Green Plants</h1>
+            <p>grow naturally · live sustainably</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="about-hero">
+    <div>
+        <h2>🌻 Rooted in Nature, Driven by Passion</h2>
+        <p>For over a decade, Quick Green Plants has been cultivating knowledge — nurturing gardeners from seed to harvest.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div style="text-align: center;">
+        <span class="section-title">Our Story</span>
+    </div>
+    
+    <div class="about-story">
+        <p><strong>Quick Green Plants</strong> sprouted from a simple idea in 2010: gardening should be accessible, joyful, and deeply sustainable. What began as a small community blog by two horticulture students has blossomed into one of the internet's most trusted organic gardening resources — now featuring <strong>78,000+ words of expert content</strong>, detailed growing guides, and a global community of over 250,000 gardeners.</p>
+        <p>Our name reflects two promises: “Quick” — rapid, actionable advice that gets results, and “Green” — an unwavering commitment to ecological stewardship, organic practices, and regenerative techniques. We believe that every garden, whether a windowsill herb pot or a sprawling permaculture homestead, can be a force for positive change.</p>
+        <h3>🌱 Why We Do It</h3>
+        <p>We’ve seen firsthand how reconnecting with the earth transforms lives. From reducing grocery bills to improving mental well-being, growing your own food and tending flowers builds resilience. But modern gardening is often clouded by chemical shortcuts, confusing jargon, and unsustainable methods. Our mission is to strip away the noise and give you clear, research-backed, and time-tested wisdom — the kind that honors the soil food web and celebrates biodiversity.</p>
+        <p>Our team includes master gardeners, botanists, permaculture designers, and educators who pour their expertise into every guide. Whether it’s a deep dive into no-till farming, a troubleshooting guide for tomato blight, or creative vertical gardening for urban spaces — we ensure accuracy, depth, and a sprinkle of inspiration. All our content remains free, ad-light, and focused on empowering you.</p>
+    </div>
+
+    <div class="mission-vision">
+        <div class="mission-card">
+            <h3>🌍 Our Mission</h3>
+            <p>To demystify organic gardening and equip everyone — from beginners to seasoned growers — with the skills to cultivate thriving, chemical-free gardens. We promote regenerative practices that heal the land, support pollinators, and build food security. Through detailed guides, workshops, and community support, we aim to grow a greener, healthier future.</p>
+        </div>
+        <div class="vision-card">
+            <h3>✨ Our Vision</h3>
+            <p>A world where gardening is recognized as essential wisdom: where front yards become edible landscapes, urban balconies burst with greens, and every person understands the magic beneath the soil. We envision a global network of empowered growers restoring ecosystems, one backyard at a time.</p>
+        </div>
+    </div>
+
+    <!-- Stats / impact -->
+    <div class="stats">
+        <div class="stat-item">
+            <span class="stat-number">78,000+</span>
+            <span class="stat-label">words of original guides</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">expert contributors</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">14 yrs</span>
+            <span class="stat-label">growing knowledge</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">250k+</span>
+            <span class="stat-label">happy gardeners</span>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <span class="section-title">🌿 The Faces Behind the Greenery</span>
+    </div>
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="https://source.unsplash.com/600x600/?woman,gardener,smiling" alt="Founder Eleanor Green">
+            <h4>Eleanor Green</h4>
+            <p>Founder & Head Horticulturist</p>
+            <p style="font-size:0.9rem; padding:0 1rem;">"I started Quick Green Plants to help people fall in love with soil. Every plant we save, every pesticide we avoid, makes me hopeful."</p>
+        </div>
+        <div class="team-member">
+            <img src="https://source.unsplash.com/600x600/?man,agronomist,farm" alt="Dr. Marcus Chen">
+            <h4>Dr. Marcus Chen</h4>
+            <p>Soil Scientist & Permaculture Lead</p>
+            <p style="font-size:0.9rem; padding:0 1rem;">Soil microbiologist turned permaculture evangelist. Marcus brings 20 years of regenerative agriculture expertise to our guides.</p>
+        </div>
+        <div class="team-member">
+            <img src="https://source.unsplash.com/600x600/?female,urban,gardener" alt="Sophia Rodriguez">
+            <h4>Sophia Rodriguez</h4>
+            <p>Urban Farming Specialist</p>
+            <p style="font-size:0.9rem; padding:0 1rem;">Sophia transforms tiny balconies into food forests. Author of "The Container Garden Bible" (over 12k copies sold).</p>
+        </div>
+        <div class="team-member">
+            <img src="https://source.unsplash.com/600x600/?botanist,plants,nature" alt="Oliver Kim">
+            <h4>Oliver Kim</h4>
+            <p>Plant Pathologist & Editor</p>
+            <p style="font-size:0.9rem; padding:0 1rem;">Oliver ensures every disease control advice is science-backed, effective, and environmentally safe.</p>
+        </div>
+    </div>
+
+    <!-- Journey timeline -->
+    <div style="text-align: center; margin-top: 1.5rem;">
+        <span class="section-title">📆 Our Journey</span>
+    </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="year">2010</div>
+            <div><strong>Humble beginnings</strong> — Eleanor starts a blog from her backyard garden sharing tips on organic pest control. First 500 subscribers join the green movement.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2014</div>
+            <div><strong>First full guide “Vegetable Gardening Unlocked”</strong> — 15,000 words, free PDF. Downloads exceed 20k in one month. We realize the hunger for deep, trustworthy content.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2018</div>
+            <div><strong>Expansion to 10+ core writers & experts</strong> — we launch detailed permaculture, composting, and indoor plant sections. Our community doubles.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2022</div>
+            <div><strong>78,000+ words milestone</strong> — more than 300 articles, step-by-step video tutorials, and the first annual “Green Thumb Summit” with 12 expert speakers.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="year">2026</div>
+            <div><strong>Present: Cultivating tomorrow</strong> — we continue to expand our library, now offering localized guides for 12 climate zones, and a thriving global gardener forum.</div>
+        </div>
+    </div>
+
+    <div class="about-story" style="background: #eaf5e3;">
+        <h3>📖 Our Commitment to Quality & Sustainability</h3>
+        <p>Every piece of content published on Quick Green Plants undergoes rigorous review by at least two horticulture specialists. We cite peer-reviewed studies where applicable, share practical field tests, and constantly update our material with new organic methods. We also offset our digital carbon footprint by partnering with reforestation initiatives — for every 10,000 visitors, we plant a tree through our “Green Bytes” program.</p>
+        <p>We also believe in accessibility: no paywalls, no aggressive ads, just knowledge. If you ever need personalized advice, you can contact our gardening helpline or join our monthly Q&A livestreams. The garden is for everyone — and so is this resource.</p>
+        <a href="index.html" class="btn-back">← Back to Home & Garden Guides</a>
+    </div>
+
+    <!-- Additional testimonial / eco values -->
+    <div style="display: flex; flex-wrap: wrap; gap: 1.8rem; margin: 3rem 0; justify-content: center;">
+        <div style="background: white; border-radius: 28px; padding: 1.6rem; max-width: 350px; box-shadow: 0 6px 14px rgba(0,0,0,0.05);">
+            <p style="font-size: 2rem;">🌎</p>
+            <p><strong>"Quick Green Plants changed my gardening life. The detailed soil chapter helped me revive my clay-heavy yard — now I grow over 30 varieties of veggies!"</strong></p>
+            <p style="margin-top: 0.5rem;">— Lisa M., Oregon</p>
+        </div>
+        <div style="background: white; border-radius: 28px; padding: 1.6rem; max-width: 350px; box-shadow: 0 6px 14px rgba(0,0,0,0.05);">
+            <p style="font-size: 2rem;">🌿</p>
+            <p><strong>"The indoor jungle guide saved my finicky fiddle leaf fig. Their propagation tips are pure gold. I recommend this site to everyone."</strong></p>
+            <p style="margin-top: 0.5rem;">— David K., Berlin</p>
+        </div>
+        <div style="background: white; border-radius: 28px; padding: 1.6rem; max-width: 350px; box-shadow: 0 6px 14px rgba(0,0,0,0.05);">
+            <p style="font-size: 2rem;">🌻</p>
+            <p><strong>"I’m a beginner and felt overwhelmed until I found Quick Green Plants. The month-by-month calendar gave me the structure I needed. Thank you!"</strong></p>
+            <p style="margin-top: 0.5rem;">— Priya S., Mumbai</p>
+        </div>
+    </div>
+
+    <div style="background: var(--cream); border-radius: 36px; padding: 2rem; text-align: center; margin-bottom: 2rem;">
+        <h3 style="color: var(--dark-green); font-size: 1.8rem;">Join our Green Community 🌱</h3>
+        <p>Sign up for our seasonal newsletter and get a free 40-page e-book “Essential Organic Gardening Checklist”. We share exclusive tips, seed swaps, and early access to workshops.</p>
+        <div style="margin-top: 1rem;">
+            <input type="email" placeholder="your@email.com" style="padding: 0.8rem 1rem; border-radius: 60px; border: 1px solid #ccc; width: 260px; max-width: 80%;">
+            <button style="background: var(--primary-green); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 60px; margin-left: 0.5rem; font-weight: bold; cursor: pointer;">Subscribe</button>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">No spam, only green inspiration. Unsubscribe anytime.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌱 Quick Green Plants</h3>
+            <p>Your trusted companion for organic gardening since 2010. Millions of words of free, ad-light gardening knowledge. Grow green, live green.</p>
+        </div>
+        <div class="footer-contact">
+            <h3>📍 Visit or Write to Us</h3>
+            <p>🏠 123 Greenway Avenue, Eco Park,<br> 
+            Portland, OR 97214, USA</p>
+            <p>📞 +1 (800) 555-GREEN (47336)</p>
+            <p>📧 hello@quickgreenplants.com</p>
+            <p>🕒 Mon-Fri: 9am-6pm (PST)</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Quick Green Plants – Cultivating a greener future. All content is original and protected. 🌍</p>
+    </div>
+</footer>
+</body>
+</html>

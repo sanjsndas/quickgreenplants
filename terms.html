@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Terms of Service | Quick Green Plants</title>
+    <meta name="description" content="Terms of service, usage guidelines, and legal information for Quick Green Plants gardening resource.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables */
+        :root {
+            --primary-green: #2e6b3e;
+            --light-green: #4c9a6f;
+            --dark-green: #1e4a2f;
+            --accent-lime: #b3d9a0;
+            --soil-brown: #8b5a2b;
+            --cream: #fef9e6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-lime);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(30,74,47,0.85), rgba(30,74,47,0.85)), url('https://source.unsplash.com/1600x400/?garden,legal,green') center/cover;
+            min-height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .legal-card {
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .legal-content {
+            padding: 2.5rem;
+        }
+
+        .legal-content h2 {
+            color: var(--primary-green);
+            margin: 1.8rem 0 1rem 0;
+            font-size: 1.8rem;
+            border-left: 6px solid var(--accent-lime);
+            padding-left: 1rem;
+        }
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+        .legal-content h3 {
+            color: var(--dark-green);
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        .legal-content p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #2c3e2f;
+        }
+        .legal-content ul, .legal-content ol {
+            margin: 0.8rem 0 1.2rem 2rem;
+        }
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+        .legal-content strong {
+            color: var(--soil-brown);
+        }
+        .highlight-box {
+            background: var(--cream);
+            padding: 1.5rem;
+            border-radius: 24px;
+            margin: 1.8rem 0;
+            border-left: 5px solid var(--light-green);
+        }
+        .effective-date {
+            font-style: italic;
+            background: #e9f3e4;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #0e2a1f;
+            color: #cdedd8;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-info h3, .footer-contact h3 {
+            margin-bottom: 0.8rem;
+            color: var(--accent-lime);
+        }
+        .footer-contact p {
+            margin: 0.5rem 0;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 1rem;
+            border-top: 1px solid #2a5a3a;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            .legal-content {
+                padding: 1.5rem;
+            }
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <h1>🌿 Quick Green Plants</h1>
+            <p>grow naturally · live sustainably</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-header">
+    <div>
+        <h1>📜 Terms of Service</h1>
+        <p>Understanding our shared commitment to ethical gardening knowledge</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="legal-card">
+        <div class="legal-content">
+            <div class="effective-date">✅ Effective date: March 30, 2026 | Last updated: March 30, 2026</div>
+            <p>Welcome to Quick Green Plants (“Company”, “we”, “our”, “us”). These Terms of Service (“Terms”) govern your access to and use of the Quick Green Plants website, including any content, functionality, and services offered on or through www.quickgreenplants.com (the “Site”). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Site.</p>
+
+            <h2>1. 🌱 Acceptance of Terms</h2>
+            <p>By using our website, you confirm that you are at least 18 years old or have parental/guardian consent. Quick Green Plants provides a rich repository of gardening information (over 78,000+ words) for personal, non-commercial use. We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Site after any changes indicates your acceptance of the new Terms.</p>
+
+            <h2>2. 📚 Intellectual Property & Content Ownership</h2>
+            <p>All content published on Quick Green Plants — including but not limited to text, articles, guides, graphics, photographs, illustrations, infographics, logos, and digital downloads — is the exclusive property of Quick Green Plants or its content creators and is protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, create derivative works of, publicly display, or commercially exploit any of the materials without prior written consent from us. However, we encourage you to share individual articles for personal, educational purposes provided you give proper credit and link back to the original page.</p>
+            <div class="highlight-box">
+                <strong>🌿 Permitted use:</strong> Printing a single copy of an article for personal reference, sharing on social media with attribution, or linking to our site. <strong>Prohibited use:</strong> Mass redistribution, scraping content for AI training, reselling our guides, or using our content for commercial advantage without explicit licensing.
+            </div>
+
+            <h2>3. 🧑‍🌾 User Conduct & Responsibilities</h2>
+            <p>You agree to use the Site only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the Site. Prohibited behavior includes harassing or causing distress to any other user, transmitting obscene or offensive content, or disrupting the normal flow of dialogue within our comment sections (if enabled). You are solely responsible for any comments or submissions you post. We reserve the right to remove any content deemed inappropriate, spammy, or harmful to the community.</p>
+            <h3>Community Guidelines</h3>
+            <ul>
+                <li>✅ Be respectful to fellow gardeners — everyone starts somewhere.</li>
+                <li>✅ Do not post promotional links or spam.</li>
+                <li>✅ Share gardening experiences, tips, and constructive feedback.</li>
+                <li>❌ No hate speech, discriminatory remarks, or personal attacks.</li>
+            </ul>
+
+            <h2>4. 🌻 Informational Purpose Only / No Professional Advice</h2>
+            <p>The content provided on Quick Green Plants is for general informational and educational purposes only. While we strive to offer accurate, up-to-date gardening guidance, horticulture practices may vary depending on climate, soil conditions, and individual circumstances. The information is not intended as a substitute for professional agricultural consulting, landscape architecture advice, or plant pathology diagnosis. Always conduct your own research or consult a local extension service before making decisions that may affect your garden, health, or property. Quick Green Plants shall not be held liable for any losses, damages, or crop failures resulting from reliance on the information provided.</p>
+
+            <h2>5. 🔗 Third-Party Links & Resources</h2>
+            <p>Our Site may contain links to external websites, tools, or resources operated by third parties (e.g., seed suppliers, gardening tool reviews). We do not control, endorse, or assume responsibility for the content, privacy policies, or practices of any third-party sites. You acknowledge and agree that Quick Green Plants is not liable for any loss or damage caused by your use of any third-party goods, services, or information.</p>
+
+            <h2>6. 🛡️ Disclaimer of Warranties</h2>
+            <p>THE SITE AND ALL INFORMATION, CONTENT, MATERIALS, AND SERVICES INCLUDED ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS. QUICK GREEN PLANTS MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, REGARDING THE OPERATION OR AVAILABILITY OF THE SITE, OR THE ACCURACY, RELIABILITY, COMPLETENESS, OR TIMELINESS OF THE CONTENT. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+
+            <h2>7. ⚖️ Limitation of Liability</h2>
+            <p>In no event shall Quick Green Plants, its affiliates, employees, authors, or partners be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your access, use, or inability to use the Site, or any errors or omissions in the content, whether based on warranty, contract, tort (including negligence), or any other legal theory. This includes, without limitation, damages for loss of profits, goodwill, data, or other intangible losses, even if we have been advised of the possibility of such damages. Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability, so the above limitations may not apply to you.</p>
+
+            <h2>8. 🌍 Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless Quick Green Plants, its owners, employees, writers, and affiliates from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys’ fees) arising out of or relating to your violation of these Terms or your use of the Site, including, but not limited to, any content you post or any activity conducted through your account.</p>
+
+            <h2>9. 📧 Electronic Communications & Privacy</h2>
+            <p>When you visit Quick Green Plants or send emails to us, you are communicating with us electronically. You consent to receive communications from us electronically. We may communicate with you by email or by posting notices on this Site. For details on how we collect, use, and protect your personal data, please review our <a href="privacy.html" style="color: var(--primary-green); font-weight: bold;">Privacy Policy</a> and <a href="cookies.html" style="color: var(--primary-green); font-weight: bold;">Cookies Policy</a>. By using the Site, you consent to such processing and you warrant that all data provided by you is accurate.</p>
+
+            <h2>10. 🧑‍⚖️ Governing Law & Dispute Resolution</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of Oregon, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms or the Site shall be resolved exclusively in the state or federal courts located in Multnomah County, Oregon. You agree to submit to the personal jurisdiction of such courts for the purpose of litigating any such claims.</p>
+
+            <h2>11. ⏸️ Termination & Suspension</h2>
+            <p>We reserve the right, without notice and in our sole discretion, to terminate your access to the Site and block future access if we believe you have violated these Terms or applicable laws. Upon termination, all provisions of these Terms which by their nature should survive (including intellectual property provisions, warranty disclaimers, and limitations of liability) shall remain in effect.</p>
+
+            <h2>12. 🌎 Entire Agreement & Severability</h2>
+            <p>These Terms constitute the entire agreement between you and Quick Green Plants regarding the use of the Site, superseding any prior agreements. If any provision of these Terms is found to be unenforceable or invalid under applicable law, such provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+
+            <div class="highlight-box">
+                <strong>🌼 Questions about these Terms?</strong> We love transparency. If you have any inquiries regarding our terms, please contact our legal & gardening team at <strong>legal@quickgreenplants.com</strong> or send a letter to: <strong>123 Greenway Avenue, Eco Park, Portland, OR 97214, USA</strong>. We aim to respond within 5–7 business days.
+            </div>
+
+            <h2>📝 Acknowledgment of Reading</h2>
+            <p>By navigating and using Quick Green Plants, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service. We appreciate you being part of a community that values sustainable gardening, ethical sharing, and respect for nature’s wisdom. Now go get your hands dirty — responsibly! 🌿</p>
+            <p style="margin-top: 1rem;"><em>— The Quick Green Plants Team</em></p>
+        </div>
+    </div>
+
+    <!-- additional quick note about the 78k+ content universe (just to tie back to the main site spirit) -->
+    <div style="text-align: center; margin: 2rem 0 1rem;">
+        <p style="background: var(--cream); display: inline-block; padding: 0.6rem 1.8rem; border-radius: 60px; font-size: 0.9rem;">📖 Back to <a href="index.html" style="color: var(--primary-green); font-weight: bold;">78,000+ words of organic gardening wisdom</a> — explore our complete guides.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌱 Quick Green Plants</h3>
+            <p>Your trusted companion for organic gardening since 2010. Millions of words of free, ad-light gardening knowledge. Grow green, live green.</p>
+        </div>
+        <div class="footer-contact">
+            <h3>📍 Visit or Write to Us</h3>
+            <p>🏠 123 Greenway Avenue, Eco Park,<br> 
+            Portland, OR 97214, USA</p>
+            <p>📞 +1 (800) 555-GREEN (47336)</p>
+            <p>📧 hello@quickgreenplants.com</p>
+            <p>🕒 Mon-Fri: 9am-6pm (PST)</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Quick Green Plants – Cultivating a greener future. All content is original and protected. 🌍 | This site is for informational purposes. Read our <a href="terms.html" style="color: var(--accent-lime);">Terms of Service</a> and <a href="privacy.html" style="color: var(--accent-lime);">Privacy Policy</a>.</p>
+    </div>
+</footer>
+</body>
+</html>

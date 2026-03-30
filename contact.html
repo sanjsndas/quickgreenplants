@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contact Us | Quick Green Plants - Organic Gardening Community</title>
+    <meta name="description" content="Get in touch with Quick Green Plants. Ask gardening questions, partnership inquiries, or just say hello. Our green-thumb team is ready to help you grow.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables */
+        :root {
+            --primary-green: #2e6b3e;
+            --light-green: #4c9a6f;
+            --dark-green: #1e4a2f;
+            --accent-lime: #b3d9a0;
+            --soil-brown: #8b5a2b;
+            --cream: #fef9e6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-lime);
+        }
+
+        /* Hero subpage style */
+        .page-hero {
+            background: linear-gradient(rgba(30,74,47,0.85), rgba(30,74,47,0.85)), url('https://source.unsplash.com/1600x400/?garden,community,plants') center/cover;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .page-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .contact-info {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .contact-info h2 {
+            color: var(--dark-green);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--light-green);
+            padding-left: 1rem;
+        }
+        .info-detail {
+            margin: 1.8rem 0;
+        }
+        .info-detail h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        .info-detail p, .info-detail a {
+            margin-left: 2rem;
+            color: #2c5a3b;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .info-detail a:hover {
+            color: var(--soil-brown);
+            text-decoration: underline;
+        }
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .social-icon {
+            background: var(--light-green);
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            transition: 0.2s;
+            display: inline-block;
+        }
+        .social-icon:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        /* contact form */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .contact-form h2 {
+            color: var(--dark-green);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--dark-green);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #d0e2c0;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: 0.2s;
+            background: #fefdf9;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--light-green);
+            box-shadow: 0 0 0 3px rgba(76,154,111,0.2);
+        }
+        .submit-btn {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-block;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: var(--dark-green);
+            transform: scale(1.01);
+        }
+        .note-text {
+            font-size: 0.85rem;
+            color: #5e7c6b;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* FAQ section */
+        .faq-section {
+            margin: 4rem 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin: 2rem 0;
+            color: var(--dark-green);
+            border-bottom: 3px solid var(--light-green);
+            display: inline-block;
+            width: auto;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+        .faq-item h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        /* map placeholder */
+        .map-card {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 30px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .map-placeholder {
+            background: #cfdec5;
+            height: 280px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-green);
+            font-weight: bold;
+            background-image: url('https://source.unsplash.com/800x400/?garden,map,green');
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            position: relative;
+        }
+        .map-placeholder p {
+            background: rgba(30,74,47,0.7);
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            color: white;
+            backdrop-filter: blur(3px);
+        }
+
+        footer {
+            background: #0e2a1f;
+            color: #cdedd8;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-info h3, .footer-contact h3 {
+            margin-bottom: 0.8rem;
+            color: var(--accent-lime);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 1rem;
+            border-top: 1px solid #2a5a3a;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <h1>🌿 Quick Green Plants</h1>
+            <p>grow naturally · live sustainably</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <div>
+        <h1>🌻 Let’s Grow Together</h1>
+        <p>Have a gardening question? Want to collaborate or just share your harvest photos? Our team of horticulture enthusiasts is here to help you cultivate joy.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="contact-grid">
+        <!-- left column: contact details & social -->
+        <div class="contact-info">
+            <h2>📍 Get in touch</h2>
+            <div class="info-detail">
+                <h3>🌱 Green Headquarters</h3>
+                <p>123 Greenway Avenue, Eco Park,<br> Portland, OR 97214, USA</p>
+            </div>
+            <div class="info-detail">
+                <h3>📞 Call or Text</h3>
+                <p>+1 (800) 555-GREEN (47336)<br> Mon–Fri: 9am – 6pm (PST)</p>
+            </div>
+            <div class="info-detail">
+                <h3>✉️ Email Us</h3>
+                <p><a href="mailto:hello@quickgreenplants.com">hello@quickgreenplants.com</a><br>
+                <a href="mailto:support@quickgreenplants.com">support@quickgreenplants.com</a> (for gardening advice)</p>
+            </div>
+            <div class="info-detail">
+                <h3>🌿 Social Garden</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📘 Instagram</a>
+                    <a href="#" class="social-icon">🐦 Twitter</a>
+                    <a href="#" class="social-icon">📌 Pinterest</a>
+                    <a href="#" class="social-icon">🎥 YouTube</a>
+                    <a href="#" class="social-icon">🌾 Facebook</a>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Follow for daily gardening tips, live Q&As, and plant giveaways!</p>
+            </div>
+        </div>
+
+        <!-- right column: contact form -->
+        <div class="contact-form">
+            <h2>📝 Send us a message</h2>
+            <p style="margin-bottom: 1.2rem;">We’d love to hear from you! Whether you need planting advice, have feedback, or want to contribute to our 78,000+ word library — just drop a note.</p>
+            <form action="#" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full name *</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Jamie Green">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address *</label>
+                    <input type="email" id="email" name="email" required placeholder="hello@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="gardening-question">🌿 Gardening Question / Plant ID</option>
+                        <option value="partnership">🤝 Partnership / Collaboration</option>
+                        <option value="workshop">🧑‍🌾 Workshop & Events</option>
+                        <option value="feedback">💚 Feedback & Suggestions</option>
+                        <option value="other">🍃 Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your message *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your garden dreams or ask a specific question..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">🌼 Send Message</button>
+                <p class="note-text">We reply within 48 hours (usually faster!). Your green friends are waiting.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- interactive map / location vibe -->
+    <div class="map-card">
+        <h2 style="color: var(--dark-green); margin-bottom: 1rem;">🌎 Visit our demonstration garden</h2>
+        <div class="map-placeholder">
+            <p>📍 Quick Green Plants Eco Hub & Teaching Garden — Open to public (seasonal workshops)</p>
+        </div>
+        <p style="margin-top: 1rem;">Join our free organic gardening workshops every first Saturday of the month. Come see our 2-acre permaculture food forest, composting demo site, and native pollinator sanctuary. Reserve your spot via email!</p>
+    </div>
+
+    <!-- FAQ section to reflect deep gardening knowledge and customer care -->
+    <div class="faq-section">
+        <div style="text-align: center;">
+            <h2 class="section-title">🌿 Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>❓ How quickly do you respond to gardening questions?</h3>
+                <p>Our horticulture team aims to reply within 24-48 hours. For urgent plant issues, check our detailed "Plant Doctor" section (part of the 78k+ word library). You can also reach us via Instagram DM for faster tips.</p>
+            </div>
+            <div class="faq-item">
+                <h3>🌱 Do you offer personalized garden plans?</h3>
+                <p>Yes! We provide custom garden design consultations (virtual or in-person in Portland area). Fill the contact form with “Garden Design Inquiry” and we’ll schedule a free 15-min discovery call.</p>
+            </div>
+            <div class="faq-item">
+                <h3>📦 Do you sell seeds or plants?</h3>
+                <p>We focus on education and resources. However, we recommend local organic seed libraries and ethical nurseries. In our “Seed & Tool Guide” (available on the homepage), we list trusted partners.</p>
+            </div>
+            <div class="faq-item">
+                <h3>🤝 How can I collaborate or write for Quick Green Plants?</h3>
+                <p>We love contributions from experienced gardeners, botanists, and permaculture designers. Send us a pitch via the contact form with “Guest Article” and a short writing sample. We’ll be in touch!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional reach-out: office hours & phone support message -->
+    <div style="background: white; border-radius: 28px; padding: 1.5rem 2rem; margin: 2rem 0; box-shadow: 0 6px 14px rgba(0,0,0,0.03); text-align: center;">
+        <h3 style="color: var(--dark-green);">💬 Live gardening helpline (seasonal)</h3>
+        <p>April – September: call our “Green Line” at +1 (800) 555-GREEN, Monday & Wednesday, 10am–4pm PST to speak directly with a master gardener.</p>
+        <p style="margin-top: 0.8rem;">📧 For press & media inquiries: <strong>press@quickgreenplants.com</strong></p>
+    </div>
+
+    <!-- small note showcasing massive content credibility -->
+    <div class="long-content" style="background: var(--cream); padding: 1.5rem; border-radius: 28px; margin-bottom: 1rem;">
+        <p style="font-size: 0.95rem; text-align: center;">🌍 <strong>Quick Green Plants</strong> is a knowledge-first community. With over 78,000+ words of organic gardening guides, monthly tutorials, and climate-smart techniques — we're here to support your green journey. Have a specific question not covered? Contact our team and we'll point you to the right resources or create custom content!</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌱 Quick Green Plants</h3>
+            <p>Your trusted companion for organic gardening since 2010. Millions of words of free, ad-light gardening knowledge. Grow green, live green.</p>
+        </div>
+        <div class="footer-contact">
+            <h3>📍 Visit or Write to Us</h3>
+            <p>🏠 123 Greenway Avenue, Eco Park,<br> Portland, OR 97214, USA</p>
+            <p>📞 +1 (800) 555-GREEN (47336)</p>
+            <p>📧 hello@quickgreenplants.com</p>
+            <p>🕒 Mon-Fri: 9am-6pm (PST)</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Quick Green Plants – Cultivating a greener future. All content is original and protected. 🌍</p>
+    </div>
+</footer>
+
+<!-- simple form alert simulation (just for demo, no actual backend) -->
+<script>
+    const form = document.getElementById('contactForm');
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            if(name) {
+                alert(`🌿 Thank you ${name}! Your message has been sent to our gardening team. We'll reply within 48 hours with green wisdom. 💚`);
+                form.reset();
+            } else {
+                alert('Please enter your name and a message before sending.');
+            }
+        });
+    }
+</script>
+</body>
+</html>

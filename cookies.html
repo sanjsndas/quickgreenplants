@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Cookies Policy | Quick Green Plants - Organic Gardening Community</title>
+    <meta name="description" content="Learn how Quick Green Plants uses cookies to enhance your gardening experience. Our cookies policy explains data practices, consent, and your choices.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f7e8;
+            color: #1a3b2f;
+            line-height: 1.6;
+        }
+
+        /* Green theme variables (consistent with contact page) */
+        :root {
+            --primary-green: #2e6b3e;
+            --light-green: #4c9a6f;
+            --dark-green: #1e4a2f;
+            --accent-lime: #b3d9a0;
+            --soil-brown: #8b5a2b;
+            --cream: #fef9e6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-lime);
+        }
+
+        /* Hero subpage style - subtle cookie theme */
+        .page-hero {
+            background: linear-gradient(rgba(30,74,47,0.85), rgba(30,74,47,0.85)), url('https://source.unsplash.com/1600x400/?cookie,plants,tea') center/cover;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .page-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Cookie-specific card styles */
+        .policy-card {
+            background: white;
+            border-radius: 32px;
+            padding: 2rem 2rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            transition: transform 0.1s ease;
+        }
+
+        .policy-card h2 {
+            color: var(--dark-green);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-left: 6px solid var(--light-green);
+            padding-left: 1rem;
+        }
+
+        .policy-card h3 {
+            color: var(--primary-green);
+            margin: 1.5rem 0 0.8rem 0;
+            font-size: 1.3rem;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--cream);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .cookie-table th, .cookie-table td {
+            border: 1px solid #cfe2c1;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .cookie-table th {
+            background-color: var(--light-green);
+            color: white;
+            font-weight: 600;
+        }
+
+        .cookie-table tr:nth-child(even) {
+            background-color: #faf9ef;
+        }
+
+        .consent-box {
+            background: #e9f3e3;
+            border-left: 5px solid var(--primary-green);
+            padding: 1.2rem 1.8rem;
+            border-radius: 28px;
+            margin: 1.8rem 0;
+        }
+
+        .btn-cookie {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-block;
+            margin-right: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn-cookie:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-cookie {
+            background: transparent;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .btn-outline-cookie:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .cookie-note {
+            font-size: 0.9rem;
+            background: #fef5e0;
+            padding: 1rem;
+            border-radius: 20px;
+            margin-top: 1.2rem;
+        }
+
+        footer {
+            background: #0e2a1f;
+            color: #cdedd8;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .footer-info h3, .footer-contact h3 {
+            margin-bottom: 0.8rem;
+            color: var(--accent-lime);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 1rem;
+            border-top: 1px solid #2a5a3a;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            .cookie-table th, .cookie-table td {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+            .policy-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <h1>🌿 Quick Green Plants</h1>
+            <p>grow naturally · live sustainably</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <div>
+        <h1>🍪 Cookies & Green Data Practices</h1>
+        <p>We use cookies to cultivate a better browsing experience — just like compost enriches soil. Learn how we keep your data fresh and transparent.</p>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Main cookies explanation card -->
+    <div class="policy-card">
+        <h2>🌱 What Are Cookies?</h2>
+        <p>Cookies are small text files placed on your device when you visit Quick Green Plants. They help us remember your preferences, understand how you interact with our organic gardening content, and improve our 78,000+ word library experience. Think of them as little seed packets that help our site grow smarter for you.</p>
+        <p style="margin-top: 0.8rem;">We respect your privacy and believe in full transparency. This policy explains which cookies we use, why we use them, and how you can manage your choices.</p>
+    </div>
+
+    <!-- Detailed cookie table -->
+    <div class="policy-card">
+        <h2>📋 Types of Cookies We Use</h2>
+        <p>Below you'll find the specific cookies active on Quick Green Plants. Each serves a distinct purpose, from essential site function to enhancing your gardening journey.</p>
+        <table class="cookie-table">
+            <thead>
+                <tr><th>Cookie Category</th><th>Name / Provider</th><th>Purpose</th><th>Duration</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>🔒 Essential</td><td>session_id, qgp_auth</td><td>These cookies are necessary for site navigation, form submission (like our contact form), and security. Without them, features such as sending gardening questions may not work.</td><td>Session / 1 year</td></tr>
+                <tr><td>⚙️ Preference</td><td>user_theme, plant_zone_pref, language_choice</td><td>Remember your gardening zone, preferred dark/light mode, and regional plant recommendations to tailor content.</td><td>6 months</td></tr>
+                <tr><td>📊 Analytics</td><td>_ga, _gid (Google Analytics), custom_event_tracking</td><td>Help us understand which organic gardening guides are most popular, how visitors navigate our library, and improve content for our community.</td><td>14 months (anonymized)</td></tr>
+                <tr><td>🎯 Functional / Social</td><td>instagram_widget, pinterest_save, youtube_pref</td><td>Enable embedded gardening videos, social sharing, and interactive workshop calendars.</td><td>Session / 30 days</td></tr>
+                <tr><td>📢 Marketing (opt-in)</td><td>newsletter_cookie, ad_partner_id</td><td>Only if you explicitly subscribe to our Green Gazette or allow tailored gardening tips. We never sell personal data.</td><td>Variable / until consent withdrawn</td></tr>
+            </tbody>
+        </table>
+        <p class="cookie-note">🌿 <strong>Your Green Choice:</strong> We never use invasive third-party tracking. Any analytics data is aggregated and anonymized to protect your identity, just like companion planting protects your veggies.</p>
+    </div>
+
+    <!-- Consent management and control panel -->
+    <div class="policy-card">
+        <h2>⚖️ Your Cookie Choices & Consent</h2>
+        <p>When you first visit Quick Green Plants, you'll see a simple cookie banner. You can accept all essential + optional cookies, or customize your preferences. You can update or withdraw consent anytime by clicking the "Cookie Preferences" button below or via our floating leaf icon (visible at bottom-right on all pages).</p>
+        <div class="consent-box" id="cookieControlPanel">
+            <h3 style="margin-top: 0;">🍪 Manage Cookie Settings</h3>
+            <p>Select which cookie categories you're comfortable with. Essential cookies are always active to ensure our contact forms, login-free experience, and security work properly.</p>
+            <div style="margin: 1rem 0;">
+                <label style="display: block; margin-bottom: 0.6rem;"><input type="checkbox" id="essentialCheck" disabled checked> 🔒 Essential Cookies (Always Active)</label>
+                <label style="display: block; margin-bottom: 0.6rem;"><input type="checkbox" id="prefCheck"> ⚙️ Preference & Personalization Cookies</label>
+                <label style="display: block; margin-bottom: 0.6rem;"><input type="checkbox" id="analyticsCheck"> 📊 Analytics Cookies (helps us improve)</label>
+                <label style="display: block; margin-bottom: 0.6rem;"><input type="checkbox" id="marketingCheck"> 📢 Marketing & Newsletter Cookies (opt-in)</label>
+            </div>
+            <div>
+                <button id="saveCookiePrefBtn" class="btn-cookie">💚 Save Preferences</button>
+                <button id="acceptAllBtn" class="btn-cookie btn-outline-cookie">🌿 Accept All Optional Cookies</button>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 1rem;">Any changes will apply immediately to your current session and future visits. Your preferences are stored in a "consent_cookie" for 12 months.</p>
+        </div>
+        <div>
+            <h3>🛠️ How to Disable Cookies via Browser</h3>
+            <p>Most modern browsers allow you to block or delete cookies entirely. However, doing so may affect the functionality of our gardening tools, like saving your plant hardiness zone. You can find instructions in your browser’s help section (Chrome, Firefox, Safari, Edge). Alternatively, use the “Do Not Track” setting — we honor DNT signals as a sign of respect for your privacy.</p>
+        </div>
+    </div>
+
+    <!-- Third-party & external services disclosure -->
+    <div class="policy-card">
+        <h2>🌐 Third-Party Services & Embedded Content</h2>
+        <p>Our website may embed videos from YouTube (for gardening tutorials), Instagram posts (community highlights), and provide links to ethical seed libraries. These services may set their own cookies when you interact with them. We do not control those third-party cookies, but we recommend reviewing their policies. Examples:</p>
+        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+            <li>🍅 <strong>YouTube</strong> – for workshop replays and "how-to" compost videos (may set cookies for playback preferences).</li>
+            <li>📌 <strong>Pinterest & Instagram</strong> – for plant inspiration galleries (cookies for social sharing).</li>
+            <li>📧 <strong>Email service (Mailchimp)</strong> – if you subscribe to our Green Thumb Newsletter, tracking pixels help us understand engagement.</li>
+        </ul>
+        <p>We only use trusted partners who comply with GDPR, CCPA, and other privacy frameworks. You can always block third-party cookies through your browser.</p>
+    </div>
+
+    <!-- updates and contact information -->
+    <div class="policy-card">
+        <h2>📅 Policy Updates & Contact</h2>
+        <p>Quick Green Plants may update this Cookies Policy occasionally to reflect changes in technology, legal requirements, or our gardening features. The “Last Updated” date below indicates the latest version. We encourage you to review this page periodically.</p>
+        <p><strong>Last Updated:</strong> March 30, 2026</p>
+        <p>If you have any questions about our use of cookies or your data, please reach out to our Data Protection Gardener (yes, that’s a real role!):</p>
+        <div style="background: var(--cream); padding: 1rem; border-radius: 20px; margin-top: 1rem;">
+            <p>📧 <strong>Email:</strong> privacy@quickgreenplants.com</p>
+            <p>📞 <strong>Phone:</strong> +1 (800) 555-GREEN (ext. 204)</p>
+            <p>🌱 <strong>Mail:</strong> 123 Greenway Avenue, Eco Park, Portland, OR 97214 — Attn: Data Privacy Office</p>
+        </div>
+        <div class="cookie-note" style="margin-top: 1.5rem;">
+            🍃 <strong>Fun fact:</strong> Just like certain plants thrive with companion planting, our cookies only work together to give you a seamless and secure experience. We never sell or misuse your digital footprint.
+        </div>
+    </div>
+
+    <!-- interactive demo: cookie consent simulation with localStorage for realism -->
+    <div class="policy-card" style="background: #eef5e9;">
+        <h2>🧪 Try Our Cookie Preference Simulator</h2>
+        <p>This section demonstrates how we remember your preferences. Use the buttons to set a demo cookie (just for this page) and see the green message appear. It’s a live example of our transparency in action!</p>
+        <div id="demoConsentMessage" style="background: var(--light-green); color: white; padding: 0.7rem; border-radius: 30px; margin: 1rem 0; text-align: center; display: none;">
+            🌟 Demo mode: Your cookie preferences have been saved! The site would now respect your analytics & marketing choices.
+        </div>
+        <button id="demoSetCookiesBtn" class="btn-cookie">🍪 Simulate Save Preferences (Demo)</button>
+        <button id="demoResetBtn" class="btn-cookie btn-outline-cookie">🌿 Reset Demo Notice</button>
+        <p style="margin-top: 0.8rem; font-size: 0.85rem;">*This is a front-end simulation showing how our consent mechanism works — no real cookies beyond functional preferences are stored for this demo.</p>
+    </div>
+
+    <!-- integration note with 78k word library / eco friendly spirit -->
+    <div class="long-content" style="background: var(--cream); padding: 1.5rem; border-radius: 28px; margin-bottom: 1rem; text-align: center;">
+        <p style="font-size: 0.95rem;">🌍 <strong>Quick Green Plants</strong> is committed to minimal, transparent data practices. Our 78,000+ word organic gardening library does not rely on invasive tracking. Your trust is the sunlight that helps us grow.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3>🌱 Quick Green Plants</h3>
+            <p>Your trusted companion for organic gardening since 2010. Millions of words of free, ad-light gardening knowledge. Grow green, live green.</p>
+        </div>
+        <div class="footer-contact">
+            <h3>📍 Visit or Write to Us</h3>
+            <p>🏠 123 Greenway Avenue, Eco Park,<br> Portland, OR 97214, USA</p>
+            <p>📞 +1 (800) 555-GREEN (47336)</p>
+            <p>📧 hello@quickgreenplants.com</p>
+            <p>🕒 Mon-Fri: 9am-6pm (PST)</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 Quick Green Plants – Cultivating a greener future. All content is original and protected. 🌍</p>
+    </div>
+</footer>
+
+<script>
+    (function() {
+        // Cookie preferences simulation: store user selections in localStorage for demo (real policy compliance)
+        // This interacts with the checkboxes and save buttons to mirror how consent would work.
+        const essentialChk = document.getElementById('essentialCheck');
+        const prefChk = document.getElementById('prefCheck');
+        const analyticsChk = document.getElementById('analyticsCheck');
+        const marketingChk = document.getElementById('marketingCheck');
+        const saveBtn = document.getElementById('saveCookiePrefBtn');
+        const acceptAllBtn = document.getElementById('acceptAllBtn');
+
+        // Load saved preferences from localStorage (simulated)
+        function loadSavedPreferences() {
+            const savedPrefs = localStorage.getItem('qgp_cookie_preferences');
+            if (savedPrefs) {
+                try {
+                    const prefs = JSON.parse(savedPrefs);
+                    if (prefs.pref !== undefined) prefChk.checked = prefs.pref;
+                    if (prefs.analytics !== undefined) analyticsChk.checked = prefs.analytics;
+                    if (prefs.marketing !== undefined) marketingChk.checked = prefs.marketing;
+                } catch(e) { console.warn("Invalid prefs"); }
+            } else {
+                // default: preferences optional unchecked, analytics may be default false, marketing false.
+                prefChk.checked = false;
+                analyticsChk.checked = false;
+                marketingChk.checked = false;
+            }
+        }
+
+        function savePreferencesToStorage() {
+            const prefs = {
+                pref: prefChk.checked,
+                analytics: analyticsChk.checked,
+                marketing: marketingChk.checked,
+                timestamp: Date.now()
+            };
+            localStorage.setItem('qgp_cookie_preferences', JSON.stringify(prefs));
+            // Show a small notification that preferences saved (like a toast)
+            const tempMsg = document.createElement('div');
+            tempMsg.innerText = '✅ Cookie preferences saved! (demo)';
+            tempMsg.style.position = 'fixed';
+            tempMsg.style.bottom = '20px';
+            tempMsg.style.right = '20px';
+            tempMsg.style.backgroundColor = '#2e6b3e';
+            tempMsg.style.color = 'white';
+            tempMsg.style.padding = '10px 18px';
+            tempMsg.style.borderRadius = '40px';
+            tempMsg.style.zIndex = '999';
+            tempMsg.style.fontWeight = 'bold';
+            tempMsg.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+            document.body.appendChild(tempMsg);
+            setTimeout(() => { tempMsg.remove(); }, 2500);
+            return true;
+        }
+
+        if (saveBtn) {
+            saveBtn.addEventListener('click', function() {
+                savePreferencesToStorage();
+                // Also update demo message visibility: we can show a quick flash in demo area if needed
+                const demoDiv = document.getElementById('demoConsentMessage');
+                if (demoDiv) {
+                    demoDiv.style.display = 'block';
+                    setTimeout(() => {
+                        if (demoDiv) demoDiv.style.opacity = '0.9';
+                        setTimeout(() => { if(demoDiv) demoDiv.style.display = 'none'; }, 2800);
+                    }, 1800);
+                }
+            });
+        }
+
+        if (acceptAllBtn) {
+            acceptAllBtn.addEventListener('click', function() {
+                prefChk.checked = true;
+                analyticsChk.checked = true;
+                marketingChk.checked = true;
+                savePreferencesToStorage();
+                const demoDiv = document.getElementById('demoConsentMessage');
+                if (demoDiv) {
+                    demoDiv.style.display = 'block';
+                    demoDiv.innerText = '🎉 All optional cookies accepted! Enjoy personalized gardening tips. 🌿';
+                    setTimeout(() => { if(demoDiv) demoDiv.style.display = 'none'; demoDiv.innerText = '🌟 Demo mode: Your cookie preferences have been saved! The site would now respect your analytics & marketing choices.'; }, 3000);
+                }
+            });
+        }
+
+        // Demo simulator buttons for extra interaction
+        const demoSetBtn = document.getElementById('demoSetCookiesBtn');
+        const demoResetBtn = document.getElementById('demoResetBtn');
+        const demoMsgDiv = document.getElementById('demoConsentMessage');
+
+        if (demoSetBtn) {
+            demoSetBtn.addEventListener('click', function() {
+                if (demoMsgDiv) {
+                    demoMsgDiv.style.display = 'block';
+                    demoMsgDiv.innerText = '🍪 Demo: Your simulated cookie preferences are now active! (Functional & analytics preferences respected)';
+                    setTimeout(() => {
+                        if(demoMsgDiv) demoMsgDiv.style.display = 'none';
+                        if(demoMsgDiv) demoMsgDiv.innerText = '🌟 Demo mode: Your cookie preferences have been saved! The site would now respect your analytics & marketing choices.';
+                    }, 3200);
+                }
+                // Also console friendly
+                console.log("Cookie demo simulation triggered");
+            });
+        }
+        if (demoResetBtn) {
+            demoResetBtn.addEventListener('click', function() {
+                if (demoMsgDiv) {
+                    demoMsgDiv.style.display = 'none';
+                    demoMsgDiv.innerText = '🌟 Demo mode: Your cookie preferences have been saved! The site would now respect your analytics & marketing choices.';
+                }
+            });
+        }
+
+        // initial load preferences
+        loadSavedPreferences();
+
+        // Also set a minimal simulated banner acknowledgment: add an info about policy being interactive.
+        const styleDisclaimer = document.createElement('div');
+        styleDisclaimer.style.position = 'fixed';
+        styleDisclaimer.style.bottom = '16px';
+        styleDisclaimer.style.left = '16px';
+        styleDisclaimer.style.backgroundColor = '#ffffffcc';
+        styleDisclaimer.style.backdropFilter = 'blur(6px)';
+        styleDisclaimer.style.padding = '6px 14px';
+        styleDisclaimer.style.borderRadius = '40px';
+        styleDisclaimer.style.fontSize = '0.7rem';
+        styleDisclaimer.style.color = '#1e4a2f';
+        styleDisclaimer.style.fontWeight = '500';
+        styleDisclaimer.style.boxShadow = '0 2px 6px rgba(0,0,0,0.1)';
+        styleDisclaimer.innerHTML = '🍪 Cookie controls active — manage via panel above.';
+        document.body.appendChild(styleDisclaimer);
+        setTimeout(() => {
+            setTimeout(() => { if(styleDisclaimer) styleDisclaimer.style.opacity = '0.7'; }, 4000);
+        }, 500);
+    })();
+</script>
+</body>
+</html>
